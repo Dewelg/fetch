@@ -5,9 +5,7 @@ let img = document.querySelector("img");
 
 searchbtn.addEventListener('click', () => {
     fetch(
-        "https://api.giphy.com/v1/gifs/translate?api_key=OQykoV775syAmzUmQG1fQUvOkD63vwq6=" 
-        + search.value,
-        {mode: 'cors'}
+      `https://api.giphy.com/v1/gifs/translate?api_key=OQykoV775syAmzUmQG1fQUvOkD63vwq6&s=${search.value}`
 )
 .then((response) => response.json())
 .then((res) => {
